@@ -22,8 +22,15 @@ jobs:
       - name: Build with Gradle
         run: ./gradlew build
 
+      - name: Check jar
+        run: |
+          ls -la build/libs
+          unzip -tq build/libs/wetsuki.jar
+
       - name: Upload built jar
         uses: actions/upload-artifact@v4
         with:
           name: Wetsuki
-          path: build/libs/*.jar
+          path: build/libs/wetsuki.jar
+          compression-level: 0
+          if-no-files-found: error
