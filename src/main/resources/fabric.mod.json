@@ -1,0 +1,28 @@
+{
+	"schemaVersion": 1,
+	"id": "wetsukiclient",
+	"version": "${version}",
+	"name": "Wetsuki",
+	"description": "Wetsuki Client for Minecraft 1.21.x",
+	"authors": [
+		"Bane"
+	],
+	"contact": {},
+	"license": "MIT",
+	"icon": "assets/wetsukiclient/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"dev.wetsuki.WetsukiClient"
+		]
+	},
+	"mixins": [
+		"wetsukiclient.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.16.0",
+		"minecraft": "~1.21.4",
+		"java": ">=21",
+		"fabric-api": "*"
+	}
+}
